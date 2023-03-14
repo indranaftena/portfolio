@@ -1,3 +1,3 @@
-# Indra (Naftena) Kurniawan's Portfolio Website
+# Indra (Naftena) Kurniawan's Portfolio Web
 
-A website source code for documenting bio and projects.
+Source code of a website for documenting bio and projects.
