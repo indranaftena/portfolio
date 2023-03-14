@@ -1,0 +1,30 @@
+@tailwind base;
+
+/* Scrollbar Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4b5563 #1f2937;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 0.75rem;
+}
+  
+::-webkit-scrollbar-track {
+    /* background: #f1f1f1; */
+    @apply bg-white;
+}
+  
+::-webkit-scrollbar-thumb {
+    /* background: #3f4254; */
+    @apply bg-gray-600;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    /* background: #2e303b; */
+    @apply bg-gray-800;
+}
+
+@tailwind components;
+@tailwind utilities;
