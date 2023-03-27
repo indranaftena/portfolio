@@ -1,4 +1,6 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Scrollbar Firefox */
 * {
@@ -26,5 +28,10 @@
     @apply bg-gray-800;
 }
 
-@tailwind components;
-@tailwind utilities;
+body {
+    @apply bg-slate-900;
+}
+
+img, video {
+    @apply max-w-none;
+}
