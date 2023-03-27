@@ -2,7 +2,7 @@
   <main class="text-slate-50">
     <section class="bg-slate-800 w-full">
       <div class="container py-8 px-7">
-        <h1 class="text-3xl text-center font-bold pb-16">My Certifications</h1>
+        <h1 class="text-3xl text-center font-bold pb-16">My Projects</h1>
         <h2 class="text-2xl font-bold pb-4">Naftena Blog</h2>
         <div class="pb-12 pl-8">
           <img src="@/assets/naftena-blog.png" class="inline-block w-[700px]" alt="naftena blog screenshot">

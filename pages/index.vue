@@ -4,7 +4,7 @@
       <div class="limiter px-20 flex flex-wrap justify-center">
         <div class="hero-area justify-end">
           <div>Hi, I'm</div>
-          <h1 class="text-3xl font-bold">Indra Kurnaiwan</h1>
+          <h1 class="text-3xl font-bold">Indra Kurniawan</h1>
         </div>
         <img class="hero-area rounded-full" src="@/assets/croped.jpg" alt="indra's photo">
         <div class="hero-area justify-start text-right">
@@ -28,7 +28,7 @@
           </div>
         </div>
         <div class="flex justify-center pb-8">
-          <NuxtLink class="py-2 px-4 text-white bg-orange-600 hover:bg-orange-500" to="/projects">Show More >></NuxtLink>
+          <NuxtLink class="py-2 px-4 text-white bg-orange-600 hover:bg-orange-500" to="/projects">Show More &raquo;</NuxtLink>
         </div>
       </div>
     </section>
