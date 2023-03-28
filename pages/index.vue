@@ -1,5 +1,5 @@
 <template>
-  <main class="text-slate-50">
+  <main class="">
     <section class="bg-slate-900 w-full">
       <div class="limiter px-20 flex flex-wrap justify-center">
         <div class="hero-area justify-end">
@@ -28,7 +28,8 @@
           </div>
         </div>
         <div class="flex justify-center pb-8">
-          <NuxtLink class="py-2 px-4 text-white bg-orange-600 hover:bg-orange-500" to="/projects">Show More &raquo;</NuxtLink>
+          <NuxtLink class="py-2 px-4 text-white bg-orange-600 hover:bg-orange-500" to="/projects">Show More &raquo;
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -37,7 +38,7 @@
       <div class="limiter">
         <h2 class="text-2xl text-center font-bold pb-10">Contact Me</h2>
         <div class="flex flex-wrap justify-between">
-          <div class="w-80 mx-auto pb-10 px-4">
+          <div class="w-80 mx-auto pb-10 px-4 flex flex-col justify-center">
             <div class="font-bold">Address</div>
             <div>Rumah Mbah Karsanto</div>
             <div>Bulu RT 3 RW 4, Punduhsari, Manyaran, Wonogiri</div>
@@ -47,14 +48,17 @@
             <div>indranaftena@gmail.com</div>
           </div>
           <form action="/dummy" class="w-80 mx-auto p-4 bg-slate-800">
-            <h3 class="font-bold pb-2">Leave a Message</h3>
-            <label class="block ml-2" for="username">Name*</label>
-            <input class="input ml-2" type="text" id="username" placeholder="Fulan">
-            <label class="block ml-2" for="email">Email*</label>
-            <input class="input ml-2" type="email" id="email" placeholder="fulan@mail.com">
-            <label class="block ml-2" for="message">Message*</label>
-            <textarea class="input ml-2" name="message" id="message" cols="0" rows="5"
-              placeholder="What you want to say...."></textarea>
+            <h3 class="font-bold pb-2 text-center">Leave a Message</h3>
+            <div class="mx-auto w-fit">
+              <label class="block" for="username">Name*</label>
+              <input class="input" type="text" id="username" placeholder="Fulan">
+              <label class="block" for="email">Email*</label>
+              <input class="input" type="email" id="email" placeholder="fulan@mail.com">
+              <label class="block" for="message">Message*</label>
+              <textarea class="input" name="message" id="message" cols="0" rows="5"
+                placeholder="What you want to say...."></textarea>
+            </div>
+            <button class="block py-1 px-4 mx-auto bg-orange-600 hover:bg-orange-500">Send</button>
           </form>
         </div>
       </div>
@@ -80,7 +84,7 @@ section .limiter {
 }
 
 form .input {
-  @apply text-slate-50 w-60 bg-slate-700 border-2 border-slate-500 focus:outline-slate-200 placeholder:text-sm placeholder:text-slate-400;
+  @apply text-slate-50 w-60 bg-slate-700 border-2 border-slate-500 focus:outline-slate-400 placeholder:text-sm placeholder:text-slate-400;
   display: block;
   padding: 4px 8px;
   margin-bottom: 16px;

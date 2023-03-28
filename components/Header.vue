@@ -1,34 +1,48 @@
 <template>
-  <header class="block sticky top-0 z-10">
-    <nav class="w-full h-fit bg-slate-900/70 backdrop-blur-lg">
-      <div class="container">
-        <div class="flex justify-between">
-          <NuxtLink to="/">
-            <img class="w-auto h-10 px-4" src="@/assets/logo.svg" alt="naftena logo">
-          </NuxtLink>
-          <div class="p-4">
-            <NuxtLink to="/">Home</NuxtLink>
-            <NuxtLink to="/about">About</NuxtLink>
-            <NuxtLink to="/projects">Projects</NuxtLink>
-            <NuxtLink to="/certificates">Certificates</NuxtLink>
-          </div>
+  <header class="block fixed top-0 w-full z-10">
+    <nav class="h-fit bg-slate-900/70 backdrop-blur-lg">
+      <div class="container py-2 md:flex md:justify-between">
+        <NuxtLink to="/" class="inline">
+          <img class="w-auto h-10 px-7 inline" src="@/assets/logo.svg" alt="naftena logo">
+        </NuxtLink>
+        <input type="checkbox" id="nav-button" class="hidden">
+        <div class="float-right px-4 md:hidden">
+          <label for="nav-button" class="block h-7 w-7 p-0">
+            <span class="line block my-1 h-1 w-full bg-slate-400"></span>
+            <span class="line block my-1 h-1 w-full bg-slate-400"></span>
+            <span class="line block my-1 h-1 w-full bg-slate-400"></span>
+          </label>
+        </div>
+        <div class="nav-links overflow-y-hidden px-4">
+          <NuxtLink to="/">Home</NuxtLink>
+          <NuxtLink to="/about">About</NuxtLink>
+          <NuxtLink to="/projects">Projects</NuxtLink>
+          <NuxtLink to="/certificates">Certificates</NuxtLink>
         </div>
       </div>
     </nav>
   </header>
 </template>
 
-<style scoped>
-.router-link-active,
-.router-link-active:hover {
+<style>
+.nav-links .router-link-active, .nav-links .router-link-active:hover {
   @apply text-white;
 }
 
-a {
-  @apply p-3 text-slate-400;
+.nav-links a {
+  @apply block px-3 py-2 text-slate-400 hover:text-slate-100 md:inline-flex;
 }
 
-a:hover {
-  @apply text-slate-100;
+@media screen and (max-width: 720px) {
+  nav #nav-button:not(:checked)~.nav-links {
+    @apply h-0;
+  }
+  nav #nav-button:checked~.nav-links {
+    @apply h-fit py-3;
+  }
+  nav #nav-button:checked~.nav-links a {
+    @apply py-4;
+  }
 }
+
 </style>

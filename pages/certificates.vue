@@ -1,5 +1,5 @@
 <template>
-  <main class="text-slate-50">
+  <main class="">
     <section class="bg-slate-800 w-full">
       <div class="container py-8 px-7">
         <h1 class="text-3xl text-center font-bold pb-16">My Certifications</h1>
