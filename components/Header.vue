@@ -1,5 +1,5 @@
 <template>
-  <header class="block fixed top-0 w-full z-10">
+  <header class="block fixed top-0 w-full z-50">
     <nav class="h-fit bg-slate-900/70 backdrop-blur-lg">
       <div class="container py-2 md:flex md:justify-between">
         <NuxtLink to="/" class="inline">

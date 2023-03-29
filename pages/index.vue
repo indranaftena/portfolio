@@ -17,12 +17,8 @@
       <div class="limiter">
         <h2 class="text-2xl text-center font-bold pb-8">Recent Projects</h2>
         <div class="flex flex-wrap justify-center pb-8">
-          <ContentQuery v-slot="{ data }">
-            <div class="project" v-for="page of data">
-              <NuxtLink :to="page._path">
-                <img :src="`/${page.cover}`" :alt="`${page.coverAlt}`">
-              </NuxtLink>
-            </div>
+          <ContentQuery :limit=3 v-slot="{ data }">
+            <ProjectWindow :data="data" />
           </ContentQuery>
         </div>
         <div class="flex justify-center pb-8">
@@ -71,14 +67,6 @@ section .limiter {
 
 .limiter .hero-area {
   @apply w-80 h-80 p-8 flex flex-col;
-}
-
-.project {
-  @apply w-80 h-80 m-2 overflow-hidden flex justify-center;
-}
-
-.project img {
-  @apply h-full object-cover;
 }
 
 form .input {
