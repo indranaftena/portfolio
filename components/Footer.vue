@@ -2,11 +2,11 @@
   <footer class="bg-slate-900">
     <div class="container">
       <div class="flex flex-wrap justify-between text-white">
-        <div class="py-7 pl-10">
+        <div class="py-7 px-10">
           <h4 class="font-semibold">Indra Kurniawan</h4>
           <div class="pt-4">Grinding to be better and better</div>
         </div>
-        <div class="py-7 pr-10">
+        <div class="py-7 px-10">
           <h4 class="font-semibold">Connect with Me</h4>
           <div class="social pt-4 flex">
             <a href="https://www.linkedin.com/in/indranaftena/" target="_blank">

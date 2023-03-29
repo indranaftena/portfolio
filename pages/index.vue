@@ -17,15 +17,13 @@
       <div class="limiter">
         <h2 class="text-2xl text-center font-bold pb-8">Recent Projects</h2>
         <div class="flex flex-wrap justify-center pb-8">
-          <div class="project">
-            <img src="@/assets/naftena-blog.png" alt="naftena blog">
-          </div>
-          <div class="project">
-            <img src="@/assets/joey-render.png" alt="naftena blog">
-          </div>
-          <div class="project">
-            <img src="@/assets/donut-maze.png" alt="naftena blog">
-          </div>
+          <ContentQuery v-slot="{ data }">
+            <div class="project" v-for="page of data">
+              <NuxtLink :to="page._path">
+                <img :src="`/${page.cover}`" :alt="`${page.coverAlt}`">
+              </NuxtLink>
+            </div>
+          </ContentQuery>
         </div>
         <div class="flex justify-center pb-8">
           <NuxtLink class="py-2 px-4 text-white bg-orange-600 hover:bg-orange-500" to="/projects">Show More &raquo;
@@ -58,7 +56,7 @@
               <textarea class="input" name="message" id="message" cols="0" rows="5"
                 placeholder="What you want to say...."></textarea>
             </div>
-            <button class="block py-1 px-4 mx-auto bg-orange-600 hover:bg-orange-500">Send</button>
+            <button class="block py-1 px-4 mx-auto text-white bg-orange-600 hover:bg-orange-500">Send</button>
           </form>
         </div>
       </div>
