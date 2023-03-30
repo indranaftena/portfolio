@@ -17,6 +17,7 @@ async function handleSubmit(event) {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString()
     });
+    console.log(doc);
     alert(JSON.stringify(doc));
   } catch (error) {
     alert(error);
