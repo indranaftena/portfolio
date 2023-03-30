@@ -5,6 +5,26 @@ useHead({
   meta: [{ name: "description", content: "I'm Indra Kurniawan and I'm a web developer" }]
 });
 
+async function handleSubmit(event) {
+  event.preventDefault();
+
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+
+  try {
+    const doc = await useFetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    });
+    alert(JSON.stringify(doc));
+  } catch (error) {
+    alert(error);
+  }
+
+
+}
+
 </script>
 
 <template>
@@ -49,22 +69,24 @@ useHead({
             <div class="font-bold pt-4">Email</div>
             <div>indranaftena@gmail.com</div>
           </div>
-          <form class="w-80 mx-auto px-4 pt-4 pb-6 bg-slate-800" name="message" method="post" data-netlify="true">
+          <form class="w-80 mx-auto px-4 pt-4 pb-6 bg-slate-800" name="message" method="post" data-netlify="true"
+            @submit="handleSubmit">
             <input type="hidden" name="form-name" value="message" />
             <h3 class="font-bold pb-2 text-center text-xl">Leave a Message</h3>
             <div class="mx-auto w-fit">
               <label class="block" for="username">Name*</label>
-              <input class="input" type="text" id="username" name="name" placeholder="Fulan"
-                pattern="[\w]+" maxlength="10" minlength="2" required />
+              <input class="input" type="text" id="username" name="name" placeholder="Fulan" pattern="[\w]+"
+                maxlength="10" minlength="2" required />
               <label class="block" for="email">Email*</label>
               <input class="input" type="email" id="email" name="email" placeholder="fulan@mail.com"
                 pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
                 required />
               <label class="block" for="text">Message*</label>
               <textarea class="input" name="text" id="message" cols="0" rows="5"
-                placeholder="What's in your mind or heart...." maxlength="280" required ></textarea>
+                placeholder="What's in your mind or heart...." maxlength="280" required></textarea>
             </div>
-            <button class="block py-1 px-4 mx-auto text-white bg-orange-600 hover:bg-orange-500" type="submit">Send</button>
+            <button class="block py-1 px-4 mx-auto text-white bg-orange-600 hover:bg-orange-500"
+              type="submit">Send</button>
           </form>
         </div>
       </div>

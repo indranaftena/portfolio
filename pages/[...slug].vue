@@ -11,7 +11,13 @@ useHead({
   <main class="">
     <section class="bg-slate-800 w-full">
       <div class="slug container py-8 pt-10 pb-24 px-8 md:px-16 xl:px-36">
-        <ContentDoc />
+        <ContentDoc>
+          <template #not-found>
+            <div class="py-28">
+              <h1>Page not found</h1>
+            </div>
+          </template>
+        </ContentDoc>
       </div>
     </section>
   </main>
@@ -38,7 +44,11 @@ useHead({
   @apply list-disc list-inside pl-2;
 }
 
-.clink {
-  @apply underline hover:text-orange-500;
+.slug .clink {
+  @apply underline font-semibold transition-all;
+}
+
+.slug .clink:hover {
+  @apply bg-orange-600 p-1 text-white no-underline;
 }
 </style>
