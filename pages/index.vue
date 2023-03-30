@@ -60,8 +60,8 @@ useHead({
               <input class="input" type="email" id="email" name="email" placeholder="fulan@mail.com"
                 pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
                 required />
-              <label class="block" for="message">Message*</label>
-              <textarea class="input" name="message" id="message" cols="0" rows="5"
+              <label class="block" for="text">Message*</label>
+              <textarea class="input" name="text" id="message" cols="0" rows="5"
                 placeholder="What's in your mind or heart...." maxlength="280" required ></textarea>
             </div>
             <button class="block py-1 px-4 mx-auto text-white bg-orange-600 hover:bg-orange-500" type="submit">Send</button>
