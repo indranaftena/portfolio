@@ -1,7 +1,16 @@
+<script setup>
+
+useHead({
+  title: 'About | Naftena Portfolio',
+  meta: [{ name: "description", content: "Naftena Portfolio about page" }]
+});
+
+</script>
+
 <template>
   <main class="">
     <section class="bg-slate-800 w-full">
-      <div class="container py-8 px-7">
+      <div class="container py-8 px-8 md:px-16 xl:px-36">
         <h1 class="text-3xl font-bold text-center pb-16">About Me</h1>
         <h2 class="text-2xl font-bold pb-4">Personal Info</h2>
         <ul class="pl-4 pb-8">

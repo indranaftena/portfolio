@@ -1,7 +1,16 @@
+<script setup>
+
+useHead({
+  title: 'Project Detail',
+  meta: [{ name: "description", content: "Background, description, and technology used in the project" }]
+});
+
+</script>
+
 <template>
   <main class="">
     <section class="bg-slate-800 w-full">
-      <div class="slug container py-8 px-7 md:px-16">
+      <div class="slug container py-8 pt-10 pb-24 px-8 md:px-16 xl:px-36">
         <ContentDoc />
       </div>
     </section>
@@ -13,15 +22,23 @@
   @apply text-3xl text-center font-bold pb-16;
 }
 
-.slug img {
-  @apply mx-auto pb-6 w-full md:w-[600px] lg:w-[800px];
+.slug img:first-of-type {
+  @apply mx-auto pb-14 w-full md:w-[600px] lg:w-[880px] xl:w-[1000px];
 }
 
 .slug h2 {
-  @apply text-xl font-semibold pt-4;
+  @apply text-2xl font-semibold pt-8;
+}
+
+.slug h3 {
+  @apply text-xl font-semibold pt-6 pl-2;
 }
 
 .slug ul {
-  @apply list-disc list-inside pb-4;
+  @apply list-disc list-inside pl-2;
+}
+
+.clink {
+  @apply underline hover:text-orange-500;
 }
 </style>

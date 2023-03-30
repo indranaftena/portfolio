@@ -3,7 +3,7 @@
     <nav class="h-fit bg-slate-900/70 backdrop-blur-lg">
       <div class="container py-2 md:flex md:justify-between">
         <NuxtLink to="/" class="inline">
-          <img class="w-auto h-10 px-7 inline" src="@/assets/logo.svg" alt="naftena logo">
+          <img class="w-auto h-10 px-7 py-1 inline" src="@/assets/logo.svg" alt="naftena logo">
         </NuxtLink>
         <input type="checkbox" id="nav-button" class="hidden">
         <div class="float-right px-4 md:hidden">

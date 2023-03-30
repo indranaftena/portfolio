@@ -1,10 +1,10 @@
 <template>
   <footer class="bg-slate-900">
     <div class="container">
-      <div class="flex flex-wrap justify-between text-white">
-        <div class="py-7 px-10">
+      <div class="py-8 px-6 flex flex-wrap justify-between text-white">
+        <div class="py-7 px-10 w-80">
           <h4 class="font-semibold">Indra Kurniawan</h4>
-          <div class="pt-4">Grinding to be better and better</div>
+          <div class="pt-4">Naftena is my username because my real name is quite common in my country</div>
         </div>
         <div class="py-7 px-10">
           <h4 class="font-semibold">Connect with Me</h4>
@@ -28,7 +28,10 @@
         </div>
       </div>
       <hr>
-      <div class="text-center text-slate-50 py-2">&copy; Indra 'Naftena' Kurniawan | All rights reserved</div>
+      <div class="py-2 px-4 flex flex-wrap justify-center">
+        <div class="text-center">&copy; 2023 Indra 'Naftena' Kurniawan |&nbsp;</div>
+        <div class="text-center">All rights reserved</div>
+      </div>
     </div>
   </footer>
 </template>
