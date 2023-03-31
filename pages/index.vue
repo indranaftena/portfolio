@@ -67,7 +67,9 @@ async function handleSubmit(event) {
             <div class="font-bold pt-4">Email</div>
             <div>indranaftena@gmail.com</div>
           </div>
-          <form class="w-80 mx-auto px-4 pt-4 pb-6 bg-slate-800" name="message" method="post" netlify
+          <form class="w-80 mx-auto px-4 pt-4 pb-6 bg-slate-800" name="message" method="post"
+            data-netlify="true"
+            data-netlify-recaptcha="true"
             @submit="handleSubmit">
             <input type="hidden" name="form-name" value="message" />
             <h3 class="font-bold pb-2 text-center text-xl">Leave a Message</h3>
@@ -83,6 +85,7 @@ async function handleSubmit(event) {
               <textarea class="input" name="text" id="message" cols="0" rows="5"
                 placeholder="What's in your mind or heart...." maxlength="280" required></textarea>
             </div>
+            <div data-netlify-recaptcha="true"></div>
             <button class="block py-1 px-4 mx-auto text-white bg-orange-600 hover:bg-orange-500"
               type="submit">Send</button>
           </form>
