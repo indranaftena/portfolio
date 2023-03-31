@@ -68,9 +68,9 @@ async function handleSubmit(event) {
             <div>indranaftena@gmail.com</div>
           </div>
           <form class="hidden" data-netlify="true" name="message">
-            <input type="text" name="name" />
-            <input type="email" name="email" />
-            <textarea name="text"></textarea>
+            <label for="name"><input type="text" name="name" id="name" /></label>
+            <label for="email"><input type="email" name="email" id="email" /></label>
+            <label for="text"><textarea name="text" id="text"></textarea></label>
           </form>
           <form class="w-80 mx-auto px-4 pt-4 pb-6 bg-slate-800" name="message"
             method="post"
