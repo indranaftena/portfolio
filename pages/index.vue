@@ -2,7 +2,8 @@
 
 useHead({
   title: 'Naftena Portfolio',
-  meta: [{ name: "description", content: "I'm Indra Kurniawan and I'm a web developer" }]
+  meta: [{ name: "description", content: "I'm Indra Kurniawan and I'm a web developer" }],
+  script: [{ src: "https://www.google.com/recaptcha/api.js", async: "true", defer: "true" }]
 });
 
 async function handleSubmit(event) {
@@ -67,13 +68,12 @@ async function handleSubmit(event) {
             <div class="font-bold pt-4">Email</div>
             <div>indranaftena@gmail.com</div>
           </div>
-          <form class="w-80 mx-auto px-4 pt-4 pb-6 bg-slate-800" name="message" method="post"
-            data-netlify="true"
-            data-netlify-recaptcha="true"
+          <form class="w-80 mx-auto px-4 pt-4 pb-6 bg-slate-800" name="message"
+            method="post"
             @submit="handleSubmit">
-            <input type="hidden" name="form-name" value="message" />
             <h3 class="font-bold pb-2 text-center text-xl">Leave a Message</h3>
             <div class="mx-auto w-fit">
+              <div class="g-recaptcha" data-sitekey="6LfnJkclAAAAAGWU0Ky9B7mXr4rRb00M5HoixGb4"></div>
               <label class="block" for="username">Name*</label>
               <input class="input" type="text" id="username" name="name" placeholder="Fulan" pattern="[\w]+"
                 maxlength="10" minlength="2" required />
