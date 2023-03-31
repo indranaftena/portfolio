@@ -12,18 +12,15 @@ async function handleSubmit(event) {
   const formData = new FormData(myForm);
 
   try {
-    const doc = await useFetch("/", {
+    await fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString()
     });
-    console.log(doc);
-    alert(JSON.stringify(doc));
+    alert("Sorry, for now this feature is in development. Please use other media instead.");
   } catch (error) {
-    alert(error);
+    alert("Sorry, for now this feature is in development. Please use other media instead.");
   }
-
-
 }
 
 </script>
