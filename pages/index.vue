@@ -5,24 +5,6 @@ useHead({
   meta: [{ name: "description", content: "I'm Indra Kurniawan and I'm a web developer" }],
 });
 
-// async function handleSubmit(event) {
-//   event.preventDefault();
-
-//   const myForm = event.target;
-//   const formData = new FormData(myForm);
-
-//   try {
-//     await fetch("/", {
-//       method: "POST",
-//       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-//       body: new URLSearchParams(formData).toString()
-//     });
-//     alert("Sorry, for now this feature is in development. Please use other media instead.");
-//   } catch (error) {
-//     alert("Sorry, for now this feature is in development. Please use other media instead.");
-//   }
-// }
-
 </script>
 
 <template>
@@ -67,16 +49,10 @@ useHead({
             <div class="font-bold pt-4">Email</div>
             <div>indranaftena@gmail.com</div>
           </div>
-          <!-- <form class="hidden" name="message" method="post" data-netlify="true">
-            <label for="name"><input type="text" name="name" id="name" /></label>
-            <label for="email"><input type="email" name="email" id="email" /></label>
-            <label for="text"><textarea name="text" id="text"></textarea></label>
-          </form> -->
-          <form class="w-80 mx-auto px-4 pt-4 pb-6 bg-slate-800" name="message"
+          <form class="w-80 mx-auto px-4 pt-4 pb-6 bg-slate-800" name="contact"
             method="post" data-netlify="true">
             <h3 class="font-bold pb-2 text-center text-xl">Leave a Message</h3>
             <div class="mx-auto w-fit">
-              <!-- <input type="hidden" name="form-name" value="message" /> -->
               <label class="block" for="username">Name*</label>
               <input class="input" type="text" id="username" name="name" placeholder="Fulan" pattern="[\w]+"
                 maxlength="10" minlength="2" required />
@@ -85,7 +61,7 @@ useHead({
                 pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
                 required />
               <label class="block" for="text">Message*</label>
-              <textarea class="input" name="text" id="message" cols="0" rows="5"
+              <textarea class="input" name="message" id="message" cols="0" rows="5"
                 placeholder="What's in your mind or heart...." maxlength="280" required></textarea>
             </div>
             <button class="block py-1 px-4 mx-auto text-white bg-orange-600 hover:bg-orange-500"
