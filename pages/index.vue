@@ -5,23 +5,23 @@ useHead({
   meta: [{ name: "description", content: "I'm Indra Kurniawan and I'm a web developer" }],
 });
 
-async function handleSubmit(event) {
-  event.preventDefault();
+// async function handleSubmit(event) {
+//   event.preventDefault();
 
-  const myForm = event.target;
-  const formData = new FormData(myForm);
+//   const myForm = event.target;
+//   const formData = new FormData(myForm);
 
-  try {
-    await fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString()
-    });
-    alert("Sorry, for now this feature is in development. Please use other media instead.");
-  } catch (error) {
-    alert("Sorry, for now this feature is in development. Please use other media instead.");
-  }
-}
+//   try {
+//     await fetch("/", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+//       body: new URLSearchParams(formData).toString()
+//     });
+//     alert("Sorry, for now this feature is in development. Please use other media instead.");
+//   } catch (error) {
+//     alert("Sorry, for now this feature is in development. Please use other media instead.");
+//   }
+// }
 
 </script>
 
@@ -67,17 +67,16 @@ async function handleSubmit(event) {
             <div class="font-bold pt-4">Email</div>
             <div>indranaftena@gmail.com</div>
           </div>
-          <form class="hidden" name="message" method="post" data-netlify="true">
+          <!-- <form class="hidden" name="message" method="post" data-netlify="true">
             <label for="name"><input type="text" name="name" id="name" /></label>
             <label for="email"><input type="email" name="email" id="email" /></label>
             <label for="text"><textarea name="text" id="text"></textarea></label>
-          </form>
+          </form> -->
           <form class="w-80 mx-auto px-4 pt-4 pb-6 bg-slate-800" name="message"
-            method="post"
-            @submit="handleSubmit">
+            method="post" data-netlify="true">
             <h3 class="font-bold pb-2 text-center text-xl">Leave a Message</h3>
             <div class="mx-auto w-fit">
-              <input type="hidden" name="form-name" value="message" />
+              <!-- <input type="hidden" name="form-name" value="message" /> -->
               <label class="block" for="username">Name*</label>
               <input class="input" type="text" id="username" name="name" placeholder="Fulan" pattern="[\w]+"
                 maxlength="10" minlength="2" required />
