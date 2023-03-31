@@ -6,6 +6,10 @@ useHead({
   script: [{ src: "https://www.google.com/recaptcha/api.js", async: "true", defer: "true" }]
 });
 
+function captchaSuccess(data) {
+  console.log(data);
+}
+
 async function handleSubmit(event) {
   event.preventDefault();
 
@@ -73,7 +77,6 @@ async function handleSubmit(event) {
             @submit="handleSubmit">
             <h3 class="font-bold pb-2 text-center text-xl">Leave a Message</h3>
             <div class="mx-auto w-fit">
-              <div class="g-recaptcha" data-sitekey="6LfnJkclAAAAAGWU0Ky9B7mXr4rRb00M5HoixGb4"></div>
               <label class="block" for="username">Name*</label>
               <input class="input" type="text" id="username" name="name" placeholder="Fulan" pattern="[\w]+"
                 maxlength="10" minlength="2" required />
@@ -85,7 +88,11 @@ async function handleSubmit(event) {
               <textarea class="input" name="text" id="message" cols="0" rows="5"
                 placeholder="What's in your mind or heart...." maxlength="280" required></textarea>
             </div>
-            <div data-netlify-recaptcha="true"></div>
+            <div class="g-recaptcha"
+              data-theme="dark"
+              data-size="compact"
+              data-callback="captchaSuccess"
+              data-sitekey="6LfnJkclAAAAAGWU0Ky9B7mXr4rRb00M5HoixGb4"></div>
             <button class="block py-1 px-4 mx-auto text-white bg-orange-600 hover:bg-orange-500"
               type="submit">Send</button>
           </form>
