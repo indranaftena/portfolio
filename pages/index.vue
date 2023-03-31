@@ -3,12 +3,7 @@
 useHead({
   title: 'Naftena Portfolio',
   meta: [{ name: "description", content: "I'm Indra Kurniawan and I'm a web developer" }],
-  script: [{ src: "https://www.google.com/recaptcha/api.js", async: "true", defer: "true" }]
 });
-
-function captchaSuccess(data) {
-  console.log(data);
-}
 
 async function handleSubmit(event) {
   event.preventDefault();
@@ -88,9 +83,6 @@ async function handleSubmit(event) {
               <textarea class="input" name="text" id="message" cols="0" rows="5"
                 placeholder="What's in your mind or heart...." maxlength="280" required></textarea>
             </div>
-            <div class="g-recaptcha my-4 mx-auto"
-              data-callback="captchaSuccess"
-              data-sitekey="6LfnJkclAAAAAGWU0Ky9B7mXr4rRb00M5HoixGb4"></div>
             <button class="block py-1 px-4 mx-auto text-white bg-orange-600 hover:bg-orange-500"
               type="submit">Send</button>
           </form>
