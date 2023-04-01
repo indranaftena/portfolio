@@ -18,7 +18,7 @@ useHead({
         <img class="hero-area rounded-full" src="@/assets/croped.jpg" alt="indra's photo">
         <div class="hero-area justify-start text-right">
           An adaptable web developer interested in both backend and frontend.
-          Willing to learn and do anything new and challenging.
+          Willing to learn anything new and challenging.
         </div>
       </div>
     </section>
@@ -49,8 +49,7 @@ useHead({
             <div class="font-bold pt-4">Email</div>
             <div>indranaftena@gmail.com</div>
           </div>
-          <form class="w-80 mx-auto px-4 pt-4 pb-6 bg-slate-800" name="contact"
-            method="post" data-netlify="true">
+          <form class="w-80 mx-auto px-4 pt-4 pb-6 bg-slate-800" name="contact" method="post" data-netlify="true">
             <h3 class="font-bold pb-2 text-center text-xl">Leave a Message</h3>
             <div class="mx-auto w-fit">
               <label class="block" for="username">Name*</label>

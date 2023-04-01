@@ -4,7 +4,7 @@
       <div class="py-8 px-6 flex flex-wrap justify-between text-white">
         <div class="py-7 px-10 w-80">
           <h4 class="font-semibold">Indra Kurniawan</h4>
-          <div class="pt-4">Naftena is my username because my real name is quite common in my country</div>
+          <div class="pt-4">I use Naftena as username because my real name is quite common in my country</div>
         </div>
         <div class="py-7 px-10">
           <h4 class="font-semibold">Connect with Me</h4>
