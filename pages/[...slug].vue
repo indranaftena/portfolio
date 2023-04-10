@@ -37,11 +37,15 @@ useHead({
 }
 
 .slug h3 {
-  @apply text-xl font-semibold pt-6 pl-2;
+  @apply text-xl font-semibold pt-6;
 }
 
 .slug ul {
-  @apply list-disc list-inside pl-2;
+  @apply list-disc list-inside;
+}
+
+.slug h3, .slug ul, .slug p {
+  @apply pl-2;
 }
 
 .slug .clink {
